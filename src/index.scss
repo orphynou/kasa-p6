@@ -1,21 +1,34 @@
+// Import des polices et des mixins si nécessaire
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+// Définition des variables
+$font-family: 'Montserrat', sans-serif;
+$color-link-black: black;
+$color-link-red: #FF6060;
+$color-link-grey: #E3E3E3;
+$color-link-white: white;
+$max-width: 1240px;
+
+// Reset CSS
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: $font-family
 }
 
+// Styles généraux
 a {
-    color: black;
+    color: $color-link-black;
 }
 
 li {
     list-style-type: none;
-  }
+}
 
+// Contenu principal
 #root {
     position: relative;
     min-height: 100vh;
     padding-bottom: 259px;
 }
-

@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
-import './card.scss'
+import { Link } from "react-router-dom";
+import "./card.scss";
 
 const Card = ({ logements }) => {
   return (
-    <li className="card__liste">
+    <li className="card">
       <Link to={`/fiches/${logements.id}`}>
         <img
           className="card__image"
@@ -13,7 +13,7 @@ const Card = ({ logements }) => {
         <h2 className="card__title">{logements.title}</h2>
       </Link>
     </li>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

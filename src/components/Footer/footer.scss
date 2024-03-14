@@ -1,0 +1,18 @@
+footer {
+    margin-top: 50px;
+    height: 209px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: black;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer__logo {
+    width: 122px;
+}

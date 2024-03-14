@@ -10,9 +10,13 @@ function About() {
   const [aboutData, setAbout] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("./data/about.json");
-      const jsonData = await res.json();
-      setAbout(jsonData);
+      try {
+        const res = await fetch("./data/about.json");
+        const jsonData = await res.json();
+        setAbout(jsonData);
+      } catch (error) {
+        console.error("Erreur lors de la récupération des données:", error);
+      }
     };
     fetchData();
   }, []);

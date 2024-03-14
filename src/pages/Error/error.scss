@@ -1,0 +1,19 @@
+.main__error {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #FF6060;
+        .error__404 {
+        font-size: 17rem;
+        font-weight: 700;
+        }
+            .error__txt {
+            font-size: 2.5rem;
+            font-weight: 500;
+            padding: 50px 0 100px;
+            }
+                .error__link {
+                    text-decoration: underline
+                }
+    }

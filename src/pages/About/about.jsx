@@ -1,21 +1,21 @@
-import Banner from '../../components/Banner/banner.jsx'
-import bannerApropos from '../../assets/ImageApropos.png'
-import Collapse from '../../components/Collapse/collapse.jsx'
-import './about.scss'
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
+import Banner from "../../components/Banner/banner";
+import Collapse from "../../components/Collapse/collapse";
+import bannerApropos from "../../assets/ImageApropos.png";
+import "./about.scss";
 
 function About() {
-  const titleBanner = ''
-  const imageBanner = bannerApropos
-  const [aboutData, setAbout] = useState([])
+  const titleBanner = "";
+  const imageBanner = bannerApropos;
+  const [aboutData, setAbout] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch('./data/about.json')
-      const jsonData = await res.json()
-      setAbout(jsonData)
-    }
-    fetchData()
-  }, [])
+      const res = await fetch("./data/about.json");
+      const jsonData = await res.json();
+      setAbout(jsonData);
+    };
+    fetchData();
+  }, []);
 
   return (
     <main className="main__about">
@@ -26,7 +26,7 @@ function About() {
         ))}
       </div>
     </main>
-  )
+  );
 }
 
-export default About
+export default About;

@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
-import './collapse.scss'
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import "./collapse.scss";
 
 function Collapse({ title, content }) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div className="collapse__list">
@@ -16,7 +16,7 @@ function Collapse({ title, content }) {
         <h3>{title}</h3>
         <FontAwesomeIcon
           icon={faChevronUp}
-          className={`collapse__icon ${isOpen ? 'open' : ''}`}
+          className={`collapse__icon ${isOpen ? "open" : ""}`}
         />
       </div>
       {isOpen && (
@@ -33,7 +33,7 @@ function Collapse({ title, content }) {
         </div>
       )}
     </div>
-  )
+  );
 }
 
-export default Collapse
+export default Collapse;

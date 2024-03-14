@@ -1,6 +1,6 @@
-import { NavLink } from 'react-router-dom'
-import logo from '../../assets/logo.png'
-import './header.scss'
+import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import "./header.scss";
 
 function Header() {
   return (
@@ -13,7 +13,7 @@ function Header() {
         <NavLink to="/about">A propos</NavLink>
       </nav>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

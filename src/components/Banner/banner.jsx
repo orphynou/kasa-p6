@@ -1,5 +1,5 @@
-import React from 'react'
-import './banner.scss'
+import React from "react";
+import "./banner.scss";
 
 const Banner = ({ title, image }) => {
   return (
@@ -7,7 +7,7 @@ const Banner = ({ title, image }) => {
       {title && <h1 className="banner__text">{title}</h1>}
       {image && <img className="banner__img" src={image} alt="bannière" />}
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

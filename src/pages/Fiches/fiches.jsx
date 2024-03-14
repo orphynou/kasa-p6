@@ -1,32 +1,44 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import Error from '../Error/error.jsx'
-import Carousel from '../../components/Carousel/carousel'
-import Collapse from '../../components/Collapse/collapse.jsx'
-import FicheTag from '../../components/FicheTag/ficheTag.jsx'
-import FicheRating from '../../components/FicheRating/ficheRating.jsx'
-import FicheHost from '../../components/FicheHost/ficheHost.jsx'
-import FicheTitle from '../../components/FicheTitle/ficheTitle.jsx'
-import './fiches.scss'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import Error from "../Error/error";
+import Carousel from "../../components/Carousel/carousel";
+import Collapse from "../../components/Collapse/collapse";
+import FicheTag from "../../components/FicheTag/ficheTag";
+import FicheRating from "../../components/FicheRating/ficheRating";
+import FicheHost from "../../components/FicheHost/ficheHost";
+import FicheTitle from "../../components/FicheTitle/ficheTitle";
+import Loader from "../../components/Loader/loader";
+import "./fiches.scss";
 
 const Fiches = () => {
-  const { id } = useParams()
-  const [logement, setLogementsData] = useState(null)
+  const { id } = useParams();
+  const [logement, setLogementsData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch('../data/logements.json')
-      const jsonData = await res.json()
-      const logementById = jsonData.find(
-        (logementsData) => logementsData.id === id,
-      )
-      setLogementsData(logementById)
-    }
-    fetchData()
-  }, [id])
+      try {
+        const res = await fetch("../data/logements.json");
+        const jsonData = await res.json();
+        const logementById = jsonData.find(
+          (logementsData) => logementsData.id === id
+        );
+        setLogementsData(logementById);
+      } catch (error) {
+        console.error("Erreur lors de la récupération des données:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, [id]);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   if (!logement) {
-    return <Error />
+    return <Error />;
   }
 
   return (
@@ -57,7 +69,7 @@ const Fiches = () => {
         <Collapse title="Équipements" content={logement.equipments} />
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default Fiches
+export default Fiches;

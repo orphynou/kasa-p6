@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import './error.scss'
+import { Link } from "react-router-dom";
+import "./error.scss";
 
 function Error() {
   return (
@@ -12,7 +12,7 @@ function Error() {
         Retourner sur la page d’accueil
       </Link>
     </main>
-  )
+  );
 }
 
-export default Error
+export default Error;

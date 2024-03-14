@@ -1,28 +1,28 @@
-import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronRight,
   faChevronLeft,
-} from '@fortawesome/free-solid-svg-icons'
-import './carousel.scss'
+} from "@fortawesome/free-solid-svg-icons";
+import "./carousel.scss";
 
 function Carousel({ pictures }) {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const NextSlide = () => {
     setCurrentSlide((currentSlide) =>
-      currentSlide === pictures.length - 1 ? 0 : currentSlide + 1,
-    )
-  }
+      currentSlide === pictures.length - 1 ? 0 : currentSlide + 1
+    );
+  };
 
   const PrevSlide = () => {
     setCurrentSlide((currentSlide) =>
-      currentSlide === 0 ? pictures.length - 1 : currentSlide - 1,
-    )
-  }
+      currentSlide === 0 ? pictures.length - 1 : currentSlide - 1
+    );
+  };
 
   if (!Array.isArray(pictures) || pictures.length <= 0) {
-    return null
+    return null;
   }
 
   return (
@@ -40,20 +40,20 @@ function Carousel({ pictures }) {
       {pictures.map((picture, index) => {
         return (
           <div
-            className={index === currentSlide ? 'slide active' : 'slide'}
+            className={index === currentSlide ? "slide active" : "slide"}
             key={index}
           >
             {index === currentSlide && (
               <img src={picture} alt="logements" className="carousel__pic" />
             )}
           </div>
-        )
+        );
       })}
       <div className="carousel__page-number">
         {currentSlide + 1}/{pictures.length}
       </div>
     </div>
-  )
+  );
 }
 
-export default Carousel
+export default Carousel;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const FicheHost = ({ name, picture }) => {
   return (
@@ -6,7 +6,7 @@ const FicheHost = ({ name, picture }) => {
       <p className="fiche__host__name">{name}</p>
       <img src={picture} alt={name} className="fiche__host__pic" />
     </div>
-  )
-}
+  );
+};
 
-export default FicheHost
+export default FicheHost;

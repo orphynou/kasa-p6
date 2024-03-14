@@ -1,0 +1,22 @@
+.rating {
+  text-align: right;
+    .stars {
+      font-size: 24px;
+      color: #e3e3e3;
+      width: 196px; 
+      height: 36px;
+    }
+  
+    .star {
+      transition: color 0.3s ease; 
+    }
+  
+    .full-star,
+    .half-star {
+      color: #ff6060; 
+    }
+  
+    .empty-star {
+      color: #e3e3e3;
+    }
+  }

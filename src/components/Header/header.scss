@@ -7,8 +7,12 @@ header {
     padding-top: 45px;
 }
 
+.header__navigation {
+    display: flex;
+    gap: 50px;
+}
+
 .header__navigation a {
-    padding-left: 57px;
     text-decoration: none;
     white-space: nowrap;
 }

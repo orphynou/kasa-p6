@@ -8,34 +8,4 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
-  
-  
-  &__list {
-    width: 83%;
-  }
-  
-  &__header {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    background: $color-link-red;
-    padding: 10px 20px 10px 15px;
-    color: white;
-    border-radius: 5px;
-  
-  
-    h3 {
-      font-size: 24px;
-    }
-  }
-  
-  &__content {
-    background: rgba(246, 246, 246, 0.45);
-    padding: 10px 20px 10px 15px;
-    font-size: 18px;
-    border-radius: 0 0 5px 5px;
-  }
 }

@@ -1,15 +1,5 @@
 @import './src/index.scss';
 
-.collapse__icon {
-  transition: transform 0.3s ease;
-  width: 32px;
-  height: 32px;
-
-  &.open {
-    transform: rotate(-180deg);
-  }
-}
-
 @keyframes slideDown {
   0% {
     max-height: 0;
@@ -30,12 +20,51 @@
   }
 }
 
-.collapse__content {
-  overflow: hidden;
-  animation: slideDown 0.8s ease forwards;
+.collapse {
+  
+  &__list {
+    width: 83%;
+  }
 
-  p {
-    animation-delay: 0.4s;
-    animation: fadeIn 0.4s ease forwards;
+  &__header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: $color-link-red;
+    padding: 10px 20px 10px 15px;
+    color: $color-link-white;
+    border-radius: 5px;
+    cursor: pointer;
+
+    h3 {
+      font-size: 24px;
+    }
+  }
+
+  &__icon {
+    transition: transform 0.3s ease;
+    width: 32px;
+    height: 32px;
+
+    &.open {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__content {
+    background: rgba(246, 246, 246, 0.45);
+    padding: 10px 20px 10px 15px;
+    font-size: 18px;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    animation: slideDown 0.8s ease forwards;
+
+    p {
+      animation-delay: 0.4s;
+      animation: fadeIn 0.4s ease forwards;
+    }
   }
 }

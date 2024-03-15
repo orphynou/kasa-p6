@@ -8,7 +8,8 @@ $color-link-red: #FF6060;
 $color-link-gray: #E3E3E3;
 $color-link-white: #fff;
 $color-link-light-gray: #F6F6F6;
-$max-width: 1240px;
+$max-width1240: 1240px;
+$max-width335: 335px;
 
 // Reset CSS
 * {
@@ -32,4 +33,7 @@ li {
     position: relative;
     min-height: 100vh;
     padding-bottom: 259px;
+    @media screen and (max-width: 425px) {
+        padding-bottom: 160px;
+    }
 }

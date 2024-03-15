@@ -2,7 +2,7 @@
 
 .logements__card {
     margin: auto;
-    max-width: $max-width;
+    max-width: $max-width1240;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -10,4 +10,11 @@
     border-radius: 25px;
     margin-top: 50px;
     padding: 25px 0;
+    @media screen and (max-width: 425px) {
+      max-width: $max-width335;
+      background-color: $color-link-white;
+      margin-top: 10px;
+      padding: 0;
+      border-radius: 10px;
+    }
   }

@@ -5,80 +5,130 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  max-width: 1240px;
+  max-width: $max-width1240;
   gap: 30px;
+  @media screen and (max-width: 425px) {
+    max-width: $max-width335;
+  }
 
   .fiche__location__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-  }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
 
-  .fiche__title__container {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    gap: 20px;
-
-    .fiche__name {
+    .fiche__title__container {
       display: flex;
       flex-direction: column;
-      width: 100%;
-      gap: 10px;
-    }
-  }
-
-  .fiche__host__container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    .fiche__host {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      justify-content: flex-end;
-
-      .fiche__host__pic {
-        border-radius: 50%;
-        height: 64px;
-      }
-
-      .fiche__host__name {
-        font-size: 1.2rem;
-        text-align: right;
-        width: 50%;
-        font-weight: 500;
-        color: $color-link-red;
-      }
-    }
-  }
-
-  .fiche__tag__container {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-
-    .fiche__tag {
-      display: flex;
-      gap: 10px;
-
-      li {
+      width: 80%;
+      gap: 20px;
+      @media screen and (max-width: 768px) {
         width: 100%;
-        background: $color-link-red;
-        color: $color-link-white;
-        font-weight: 700;
-        text-align: center;
-        border-radius: 10px;
-        padding: 5px 30px;
+      }
+  
+      .fiche__name {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+  
+        .fiche__name__title {
+          font-size: 2.25rem;
+          font-weight: 500;
+          color: $color-link-red;
+          @media screen and (max-width: 425px) {
+            font-size: 1.125rem;
+          }
+        }
+      
+        .fiche__name__location {
+          font-size: 1.125rem;
+          font-weight: 500;
+          @media screen and (max-width: 425px) {
+            font-size: 0.875rem;
+          }
+        }
+      }
+  
+      .fiche__tag__container {
+        display: flex;
+        width: 100%;
         align-items: center;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        justify-content: space-between;
+    
+        .fiche__tag {
+          display: flex;
+          gap: 10px;
+          @media screen and (max-width: 768px) {
+            overflow: auto;
+          }
+    
+          li {
+            width: 100%;
+            background: $color-link-red;
+            color: $color-link-white;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 10px;
+            padding: 5px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @media screen and (max-width: 768px) {
+              font-size: 0.875rem;
+            }
+            @media screen and (max-width: 425px) {
+              font-size: 0.675rem;
+            }
+          }
+        }
+      }
+    }
+  
+    .fiche__host__container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      @media screen and (max-width: 768px) {
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+      @media screen and (max-width: 425px) {
+        width: 100%;
+        justify-content: space-between;
+      }
+  
+      .fiche__host {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: flex-end;
+
+        .fiche__host__name {
+          font-size: 1.2rem;
+          text-align: right;
+          width: 50%;
+          font-weight: 500;
+          color: $color-link-red;
+          @media screen and (max-width: 425px) {
+            font-size: 0.875rem;
+          }
+        }
+  
+        .fiche__host__pic {
+          border-radius: 50%;
+          height: 64px;
+          @media screen and (max-width: 425px) {
+            height: 32px;
+          }
+        }        
       }
     }
   }
@@ -88,16 +138,10 @@
     width: 100%;
     margin: auto;
     display: flex;
-  }
-
-  .fiche__name__title {
-    font-size: 36px;
-    font-weight: 500;
-    color: $color-link-red;
-  }
-
-  .fiche__name__location {
-    font-size: 18px;
-    font-weight: 500;
+    @media screen and (max-width: 768px) {
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 }

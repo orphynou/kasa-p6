@@ -2,18 +2,30 @@
 
 .banner {
   margin: auto;
-  max-width: 1240px;
+  max-width: $max-width1240;
   position: relative;
   height: 223px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 20px;
+  font-size: 1.25rem;
+  @media screen and (max-width: 425px) {
+    max-width: $max-width335;
+    height: 111px;
+    font-size: 0.625rem;
+    justify-content: left;
+  }
 
   &__text {
     position: relative;
     z-index: 2;
+    @media screen and (max-width: 425px) {
+    white-space: pre-line;
+    overflow-wrap: break-word;
+    max-width: 210px;
+    padding-left: 15px;
+    }
   }
 
   &__img {
@@ -24,6 +36,9 @@
     height: 100%;
     object-fit: cover;
     border-radius: 25px;
+    @media screen and (max-width: 425px) {
+      border-radius: 10px;
+    }
   }
 
   &::after {
@@ -33,5 +48,8 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 25px;
+    @media screen and (max-width: 425px) {
+      border-radius: 10px;
+    }
   }
 }

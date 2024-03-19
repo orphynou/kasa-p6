@@ -24,7 +24,7 @@
   
   &__list {
     width: 83%;
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 430px) {
       width: 100%;
     }
   }
@@ -44,7 +44,7 @@
 
     h3 {
       font-size: 1.5rem;
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 430px) {
         font-size: 0.815rem;
       }
     }
@@ -54,7 +54,7 @@
     transition: transform 0.3s ease;
     width: 32px;
     height: 32px;
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 430px) {
       width: 19px;
       height: 19px;
     }
@@ -67,11 +67,11 @@
   &__content {
     background: rgba(246, 246, 246, 0.45);
     padding: 10px 20px 10px 15px;
-    font-size: 1.125rem;
+    font-size: $font18px;
     border-radius: 0 0 5px 5px;
     overflow: hidden;
     animation: slideDown 0.8s ease forwards;
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 430px) {
       font-size: 0.75rem;
     }
 

@@ -13,7 +13,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 430px) {
     height: 150px;
     margin-top: 0;
     justify-content: center;
@@ -21,7 +21,7 @@ footer {
   }
 
   p {
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 430px) {
       white-space: pre-line;
       overflow-wrap: break-word;
       max-width: 95px;

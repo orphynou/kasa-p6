@@ -7,7 +7,7 @@ header {
     align-items: center;
     margin: 0 auto 50px auto;
     padding-top: 45px;
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 430px) {
       max-width: $max-width335;
       padding-top: 20px;
       margin-bottom: 25px;
@@ -16,13 +16,13 @@ header {
     .header__navigation {
     display: flex;
     gap: 50px;
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 430px) {
       gap: 25px;
     }
       a {
         text-decoration: none;
         white-space: nowrap;
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: 430px) {
           font-size: 0.8rem;
           text-transform: uppercase;
         }
@@ -32,7 +32,7 @@ header {
       }
     }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 430px) {
     img {
       content: url('../../assets/logo-m.png');
     }   

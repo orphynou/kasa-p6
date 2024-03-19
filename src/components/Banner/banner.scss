@@ -10,7 +10,7 @@
   align-items: center;
   color: white;
   font-size: 1.25rem;
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 430px) {
     max-width: $max-width335;
     height: 111px;
     font-size: 0.625rem;
@@ -20,7 +20,7 @@
   &__text {
     position: relative;
     z-index: 2;
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 430px) {
     white-space: pre-line;
     overflow-wrap: break-word;
     max-width: 210px;
@@ -36,7 +36,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 25px;
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 430px) {
       border-radius: 10px;
     }
   }
@@ -48,7 +48,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 25px;
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 430px) {
       border-radius: 10px;
     }
   }

@@ -7,7 +7,7 @@
   margin: auto;
   max-width: $max-width1240;
   gap: 30px;
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 430px) {
     max-width: $max-width335;
   }
 
@@ -40,16 +40,16 @@
           font-size: 2.25rem;
           font-weight: 500;
           color: $color-link-red;
-          @media screen and (max-width: 425px) {
-            font-size: 1.125rem;
+          @media screen and (max-width: 430px) {
+            font-size: $font18px;
           }
         }
       
         .fiche__name__location {
-          font-size: 1.125rem;
+          font-size: $font18px;
           font-weight: 500;
-          @media screen and (max-width: 425px) {
-            font-size: 0.875rem;
+          @media screen and (max-width: 430px) {
+            font-size: $font14px;
           }
         }
       }
@@ -82,9 +82,9 @@
             overflow: hidden;
             text-overflow: ellipsis;
             @media screen and (max-width: 768px) {
-              font-size: 0.875rem;
+              font-size: $font14px;
             }
-            @media screen and (max-width: 425px) {
+            @media screen and (max-width: 430px) {
               font-size: 0.675rem;
             }
           }
@@ -100,7 +100,7 @@
         flex-direction: row-reverse;
         align-items: center;
       }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 430px) {
         width: 100%;
         justify-content: space-between;
       }
@@ -112,20 +112,20 @@
         justify-content: flex-end;
 
         .fiche__host__name {
-          font-size: 1.2rem;
+          font-size: $font19px;
           text-align: right;
           width: 50%;
           font-weight: 500;
           color: $color-link-red;
-          @media screen and (max-width: 425px) {
-            font-size: 0.875rem;
+          @media screen and (max-width: 430px) {
+            font-size: $font14px;
           }
         }
   
         .fiche__host__pic {
           border-radius: 50%;
           height: 64px;
-          @media screen and (max-width: 425px) {
+          @media screen and (max-width: 430px) {
             height: 32px;
           }
         }        
